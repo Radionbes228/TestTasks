@@ -94,9 +94,6 @@ public class CrptApi{
     }
 
     private String convertDocumentToJson(Document document){
-        System.out.println(new GsonBuilder()
-                .registerTypeAdapter(LocalDate.class, new LocalDateAdapter())
-                .create().toJson(document));
         return new GsonBuilder()
                 .registerTypeAdapter(LocalDate.class, new LocalDateAdapter())
                 .create().toJson(document);
